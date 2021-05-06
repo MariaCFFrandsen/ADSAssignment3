@@ -136,7 +136,8 @@ public class QueensGambit {
 
   }
 
-  private int checkQueenCounter() {
+  //skal være private, men public for test klassens skyld
+  public int checkQueenCounter() {
     int counter = 0;
     for (int i = 0; i < array.length; i++) {
       for (int j = 0; j < array.length ; j++) {
@@ -150,7 +151,9 @@ public class QueensGambit {
 
   //i = 0
   //j == 2
-  private boolean checkIfWeCanPutQueenHorizontal(int i, int j) {
+  //skal være private, men public for test klassens skyld
+
+  public boolean checkIfWeCanPutQueenHorizontal(int i, int j) {
     int a = i;
     int b = j;
 
@@ -164,7 +167,9 @@ public class QueensGambit {
 
   //i=2
   //j = 3
-  private boolean checkIfWeCanPutQueenUpperDiagonal(int i, int j) {
+  //skal være private, men public for test klassens skyld
+
+  public boolean checkIfWeCanPutQueenUpperDiagonal(int i, int j) {
     int a = i;
     int b = j;
 
@@ -182,7 +187,9 @@ public class QueensGambit {
 
   //i=1
   //j = 2
-  private boolean checkIfWeCanPutQueenDownwardsDiagonal(int i, int j) {
+  //skal være private, men public for test klassens skyld
+
+  public boolean checkIfWeCanPutQueenDownwardsDiagonal(int i, int j) {
     int a = i;
     int b = j;
 
@@ -198,7 +205,9 @@ public class QueensGambit {
   }
 
 
-  private boolean checkIfWeCanPutQueen(int i, int j) {
+  //skal være private, men public for test klassens skyld
+
+  public boolean checkIfWeCanPutQueen(int i, int j) {
     boolean a;
     a = checkIfWeCanPutQueenHorizontal(i, j);
     if (a) {
@@ -212,7 +221,9 @@ public class QueensGambit {
 
 
 
-  private int checkCoordinatesOfLastQueen(int lastQueenX) {
+  //skal være private, men public for test klassens skyld
+
+  public int checkCoordinatesOfLastQueen(int lastQueenX) {
     for (int i = 0; i < array.length; i++) {
       if(array[i][lastQueenX].equals("O"))
         return i;

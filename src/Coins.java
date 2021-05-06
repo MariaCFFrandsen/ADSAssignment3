@@ -3,12 +3,12 @@ import java.util.HashMap;
 public class Coins
 {
 
-  private static HashMap<Integer, Integer>  map = new HashMap<>();
+  private static final HashMap<Integer, Integer>  map = new HashMap<>();
 
   static int minCoins(int coins[], int amount)
   {
     if (amount == 0) return 0;
-
+    if (map.containsValue(amount)) return map.get(amount);
     int res = amount;
     int sub_res = 0;
 
@@ -16,12 +16,13 @@ public class Coins
     {
       if (coins[i] <= amount)
       {
-        if (map.containsValue(amount-coins[i]))
+        if (map.containsKey(amount-coins[i]))
         {
           sub_res = map.get(amount-coins[i]);
         }
         else
         {
+
           sub_res = minCoins(coins, amount-coins[i]);
           map.put(amount-coins[i], sub_res);
         }
@@ -34,5 +35,12 @@ public class Coins
     }
     map.put(amount, res);
     return res;
+  }
+
+  public static void tester()
+  {
+    map.entrySet().forEach(entry -> {
+      System.out.println(entry.getKey()+ " " + entry.getValue());
+    });
   }
 }

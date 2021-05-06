@@ -7,7 +7,11 @@ public class main
     System.out.println ( "Minimum coins required is "
         + Coins.minCoins(coins, V));
 
-    System.out.println("Minimum coins required is "
-        + Coins.minCoins(coins, V));
+
+    //Coins.tester();
+    PrintArray arrayPrinter = new PrintArray();
+    QueensGambit skakbræt = new QueensGambit();
+    arrayPrinter.presentBoard(skakbræt.NQueens(15));
+
   }
 }
